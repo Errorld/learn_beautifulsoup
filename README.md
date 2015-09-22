@@ -31,3 +31,26 @@ blah_name = [ k for k,v in locals().iteritems() if v is blah][0]
 not perfect, but may *work*.
 
 > This is not possible in Python, which really doesn't have "variables". Python has names, and there can be more than one name for the same object.
+
+###personal problem solved by eval()
+```
+def decorator(f):	#prictice decoration
+	def fn(thing):
+		input("press to print("+thing+")")
+		return f(thing)
+	return fn
+	
+@decorator
+def printer(string):
+	print(eval(string))
+
+L = ['soup.title', 'soup.title.name', 'soup.title.string',\
+ 'soup.p', 'soup.a', 'soup.find_all("a")', \	#add strings here
+ 'soup.find(id="link3")', 'soup.get_text()']	#be ware of the 'and"
+soup = BeautifulSoup(html_doc, 'html.parser')
+
+for i in L:
+	printer(i)
+```
+**I must be a genius**
+![](http://7xlyu9.com1.z0.glb.clouddn.com/15-9-22/22355254.jpg)

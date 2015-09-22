@@ -2,7 +2,8 @@
 
 from bs4 import BeautifulSoup
 
-html_doc = """
+#get a html will use urllib/urllib2/tornado later
+html_doc = """	
 <html><head><title>The Dormouse's story</title></head>
 <body>
 <p class="title"><b>The Dormouse's story</b></p>
@@ -15,19 +16,28 @@ and they lived at the bottom of a well.</p>
 
 <p class="story">...</p>
 """
-def decorator(f):
+
+def decorator(f):	#prictice decoration
 	def fn(thing):
-		print('fuck')
+		input("press to print("+thing+")")
 		return f(thing)
 	return fn
+	
 @decorator
-def printer(thing):
-	print(thing)
+def printer(string):
+	print(eval(string))
 
-string='god'
-printer(string)
-
+L = ['soup.title', 'soup.title.name', 'soup.title.string',\
+ 'soup.p', 'soup.a', 'soup.find_all("a")', \	#add strings here
+ 'soup.find(id="link3")', 'soup.get_text()']	#be ware of the 'and"
 soup = BeautifulSoup(html_doc, 'html.parser')
+
+for i in L:
+	printer(i)
+	
+	
+'''useless remnant
+
 # soup_name = [ k for k,v in locals().iteritems() if v is soup][0]
 # won't work with dict
 # I just can't get the name of a variable.
@@ -48,3 +58,4 @@ input('press to print soup.find(id="link3")')
 print(soup.find(id='link3'))
 input('press to print soup.get_text()')
 print(soup.get_text())
+'''
