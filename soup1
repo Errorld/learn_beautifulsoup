@@ -26,23 +26,25 @@ def printer(thing):
 
 string='god'
 printer(string)
-'''
 
-soup = BeautifulSoup(html_doc)
+soup = BeautifulSoup(html_doc, 'html.parser')
+# soup_name = [ k for k,v in locals().iteritems() if v is soup][0]
+# won't work with dict
+# I just can't get the name of a variable.
+# Therefore, the following is:
 input('press to print soup.title')
 print(soup.title)
-input('press')
+input('press to print soup.title.name')
 print(soup.title.name)
-input('press')
+input('press to print soup.title.string')
 print(soup.title.string)
-input('press')
+input('press to print soup.p')
 print(soup.p)
-input('press')
+input('press to print soup.a')
 print(soup.a)
-input('press')
+input('press to print soup.find_all("a")')
 print(soup.find_all('a'))
-input('press')
+input('press to print soup.find(id="link3")')
 print(soup.find(id='link3'))
-input('press')
+input('press to print soup.get_text()')
 print(soup.get_text())
-'''

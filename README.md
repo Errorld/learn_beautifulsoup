@@ -6,9 +6,16 @@
 find a answer on Zhihu,which is:
 
 > **no** method to do so
-
 [original answer](http://www.zhihu.com/question/20403362/answer/15050144)
 'cause Python holds no such a useful function and implement no pre-processing.*I guse*
 ###also got something:
 - global() gives a dict which contains{variableName, value}
 but can't get the variableName with no clue
+
+[form Stack Overflow](http://stackoverflow.com/questions/2553354/how-to-get-a-variable-name-as-a-string-in-python)
+on Stack Overflow, I got a piece of useful and dangrous code:
+```
+blah = 1
+blah_name = [ k for k,v in locals().iteritems() if v is blah][0]
+```
+not perfect, but may *work*.
