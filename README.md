@@ -1,21 +1,33 @@
 # learn_beautifulsoup
+
 2015-09-22 16:37:40
 
+
+
+
 - begin to learn
+
 ###encountered a problem when I want to derive the *name of a variable* from a *variable*
+
 find a answer on Zhihu,which is:
 
 > **no** method to do so
-[original answer](http://www.zhihu.com/question/20403362/answer/15050144)
+
+
+- [original answer](http://www.zhihu.com/question/20403362/answer/15050144)
 'cause Python holds no such a useful function and implement no pre-processing.*I guse*
-###also got something:
-- global() gives a dict which contains{variableName, value}
+also got something:
+ - global() gives a dict which contains{variableName, value}
+
 but can't get the variableName with no clue
 
-[form Stack Overflow](http://stackoverflow.com/questions/2553354/how-to-get-a-variable-name-as-a-string-in-python)
-on Stack Overflow, I got a piece of useful and dangrous code:
+
+- [form Stack Overflow](http://stackoverflow.com/questions/2553354/how-to-get-a-variable-name-as-a-string-in-python)
+on Stack Overflow, I got a piece of useful but dangrous code:
 ```
 blah = 1
 blah_name = [ k for k,v in locals().iteritems() if v is blah][0]
 ```
 not perfect, but may *work*.
+
+> This is not possible in Python, which really doesn't have "variables". Python has names, and there can be more than one name for the same object.
