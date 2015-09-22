@@ -1,11 +1,11 @@
-# learn_beautifulsoup
+#learn_beautifulsoup
 
+##begin to learn
 2015-09-22 16:37:40
 
-
-
-
-- begin to learn
+- add readme.md
+- add soup1.py
+ - enumerate some usages of BeautifulSoup
 
 ###encountered a problem when I want to derive the *name of a variable* from a *variable*
 
@@ -54,3 +54,14 @@ for i in L:
 ```
 **I must be a genius**
 ![](http://7xlyu9.com1.z0.glb.clouddn.com/15-9-22/22355254.jpg)
+*************
+##something wrong here
+2015-09-22 19:38:19
+
+- add dict.py
+    - get translation from iciba in comman mode
+    - uses like:![](http://7xlyu9.com1.z0.glb.clouddn.com/15-9-22/29069834.jpg)
+    - actually this is the begining of my learning about BeautifulSoup
+
+> Somehow I figured out that this is not what a readme should be like
+I need a blog maybe
