@@ -1,5 +1,6 @@
 # learn_beautifulsoup
 > 2015-09-22 16:37:40
+
 - begin to learn
 ##encountered a problem when I want to derive the *name of a variable* from a *variable*
 find a answer on Zhihu,which is:
